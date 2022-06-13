@@ -34,7 +34,6 @@ a {
 }
 
 .header {
-    /* border-bottom: 3px solid rgb(0, 47, 100); */
     display: flex;
     justify-content: center;
     align-items: center;
