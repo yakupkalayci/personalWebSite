@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 80vh;
     background-color: rgb(238, 246, 255);
     color: rgb(0, 47, 100);
     padding-top: 1rem;
@@ -26,11 +25,16 @@ a {
 
 .darkMode {
     background-color: rgb(0, 47, 100);
-    color: rgb(238, 246, 255);
+    color: rgb(163, 163, 163);
+}
+
+.lightMode {
+    background-color: rgb(238,246,255);
+    color :rgb(0, 47, 100)
 }
 
 .header {
-    border-bottom: 3px solid rgb(0, 47, 100);
+    /* border-bottom: 3px solid rgb(0, 47, 100); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,15 +59,10 @@ a {
     text-decoration: underline;
 }
 
-.headerBtn {
-    align-self: flex-end;
-}
 
 #darkModeBtn {
     padding: 0.5rem 1.1rem;
     border-radius: 8px;
-    background-color: rgb(0, 47, 100);
-    color: rgb(238, 246, 255);
 }
 
 #darkModeBtn:hover {
@@ -76,7 +75,7 @@ main {
 }
 
 .mainText {
-    width: 50%;
+    width: 55%;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -86,6 +85,21 @@ main {
 }
 
 .mainText > p {
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     line-height: 30px;
+}
+
+#handIcon {
+    margin-left: 20px;
+}
+
+.contactLinks {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 4px;
+}
+
+.contactLinks > a:hover {
+    font-size: 36px;
 }
