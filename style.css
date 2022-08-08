@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,6 +69,10 @@ a {
     border: 1px solid rgb(238, 246, 255);
 }
 
+.headerLinks {
+    margin-right: 15px;
+}
+
 main {
     width: 70%;
 }
@@ -101,4 +105,55 @@ main {
 
 .contactLinks > a:hover {
     font-size: 36px;
+}
+
+#projects {
+    width: 90%;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.projects {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+}
+
+.project {
+    text-align: center;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.project > img {
+    border-radius: 6px;
+}
+
+.project > h3 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.projectLinks {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    padding: 0 2rem;
+}
+
+.projectLink {
+    color: rgb(0, 47, 100);
+    border: 2px solid rgb(0, 47, 100);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.projectLink:hover {
+    background-color: rgb(0, 47, 100);
+    color: rgb(238,246,255);
 }
