@@ -1,0 +1,41 @@
+main {
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+article {
+    margin-top: 2rem;
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.image {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.image > img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+p {
+    letter-spacing: 1px;
+    line-height: 35px;
+    padding: 0 12rem;
+}
+
+footer {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+}
