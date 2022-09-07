@@ -135,6 +135,14 @@ main {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+.project:hover {
+    box-shadow: 3px 3px 0 0 #000;
+    -webkit-transform: translate(-2px,-4px);
+    -ms-transform: translate(-2px,-4px);
+    transform: translate(-2px,-4px);
+    cursor: pointer;
+}
+
 .project > img {
     border-radius: 6px;
 }
@@ -175,6 +183,7 @@ main {
 .articles {
     margin-top: 2rem;
     position: relative;
+    padding-bottom: 10rem;
 }
 
 .article {
@@ -189,6 +198,11 @@ main {
 
 .articleImg > img{
     border-radius: 9px;
+}
+
+.text-info {
+    font-weight: bold;
+    letter-spacing: 1.2px;
 }
 
 .mainArticle > h3 {
