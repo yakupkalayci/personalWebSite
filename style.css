@@ -15,7 +15,6 @@ body {
     justify-content: space-between;
     background-color: rgb(238, 246, 255);
     color: rgb(0, 47, 100);
-    padding-top: 1rem;
 }
 
 a {
@@ -44,6 +43,7 @@ a {
     align-items: center;
     width: 100%;
     padding: 1rem 0;
+    box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 48%);
 }
 
 .headerSeperator {
@@ -78,8 +78,13 @@ a {
     margin-right: 15px;
 }
 
+.headerLinks:hover {
+    font-weight: bold;
+}
+
 main {
     width: 70%;
+    padding-top: 4rem;
 }
 
 .mainText {
