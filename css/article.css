@@ -4,7 +4,7 @@ main {
 }
 
 article {
-    margin-top: 2rem;
+    margin-top: -2rem;
     background-color: #f7f7f7;
     padding: 2rem;
     border-radius: 8px;
@@ -16,7 +16,7 @@ h1 {
 }
 
 .image {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 2rem;
 }
@@ -32,10 +32,12 @@ p {
     padding: 0 12rem;
 }
 
-footer {
+.articleFooter {
     margin-top: 1rem;
     font-size: 0.8rem;
     font-style: italic;
     font-weight: bold;
     text-align: right;
+    background-color: initial;
+    box-shadow: none;
 }
