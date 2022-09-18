@@ -6,7 +6,7 @@ const projectLinks = document.querySelectorAll(".projectLinks > a");
 
 const changeTheme = () => {
     if(document.body.classList.contains("darkMode")) {
-        themeButton.textContent = "Dark";
+        themeButton.innerHTML = `<i class="fa-sharp fa-solid fa-moon"></i>`
         themeButton.classList.add("darkMode");
         themeButton.classList.remove("lightMode");
         document.body.classList.remove("darkMode");
@@ -15,11 +15,10 @@ const changeTheme = () => {
         changeProjectBackgroundColor("light");
         changeProjectLinksBackgroundColor("light");
     } else {
-        themeButton.textContent = "Light";
+        themeButton.innerHTML = `<i class="fa-sharp fa-solid fa-sun"></i>`
         themeButton.classList.remove("darkMode");
         themeButton.classList.add("lightMode");
         document.body.classList.add("darkMode");
-        header.style.borderBottomColor = "rgb(238, 246, 255)";
         mainTitle.style.color = "rgb(238, 246, 255)";
         changeProjectBackgroundColor("dark");
         changeProjectLinksBackgroundColor("dark");
@@ -38,7 +37,6 @@ function changeProjectBackgroundColor(currentMode) {
 function changeProjectLinksBackgroundColor(currentMode) {
     if(currentMode === "light") {
         projectLinks.forEach(link => link.classList.remove("projectLinksDarkMode"));
-        console.log("çalıştı");
     }
     else if(currentMode === "dark") {
         projectLinks.forEach(link => link.classList.add("projectLinksDarkMode"));
