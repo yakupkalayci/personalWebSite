@@ -289,7 +289,7 @@ footer > p > i {
     font-size: 2rem;
 }
 
-@media only screen and (max-width:397px) {
+@media only screen and (max-width:437px) {
     header > .headerSeperator {
         display: flex;
         flex-direction: column;
@@ -298,11 +298,25 @@ footer > p > i {
     }
 
     header > .headerSeperator > .headerBtn {
+        display: flex;
         margin-top: 1rem;
+        font-size: 15px;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 867px) {
+    .article {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .articleImg > img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
     main {
         width: 80%;
     }
