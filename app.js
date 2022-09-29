@@ -3,6 +3,7 @@ const header = document.querySelector("header");
 const mainTitle = document.querySelector(".mainTitle > a");
 const projects = document.querySelectorAll(".project");
 const projectLinks = document.querySelectorAll(".projectLinks > a");
+const articles = document.querySelectorAll(".article");
 
 const changeTheme = () => {
     if(document.body.classList.contains("darkMode")) {
@@ -14,6 +15,7 @@ const changeTheme = () => {
         mainTitle.style.color = "rgb(0, 47, 100)";
         changeProjectBackgroundColor("light");
         changeProjectLinksBackgroundColor("light");
+        changeArticlesBackgroundColor("light");
     } else {
         themeButton.innerHTML = `<i class="fa-sharp fa-solid fa-sun"></i>`
         themeButton.classList.remove("darkMode");
@@ -22,6 +24,7 @@ const changeTheme = () => {
         mainTitle.style.color = "rgb(238, 246, 255)";
         changeProjectBackgroundColor("dark");
         changeProjectLinksBackgroundColor("dark");
+        changeArticlesBackgroundColor("dark");
     }
 }
 
@@ -40,6 +43,15 @@ function changeProjectLinksBackgroundColor(currentMode) {
     }
     else if(currentMode === "dark") {
         projectLinks.forEach(link => link.classList.add("projectLinksDarkMode"));
+    }
+}
+
+function changeArticlesBackgroundColor(currentMode) {
+    if(currentMode === "light") {
+        articles.forEach(article => article.classList.remove("articleDarkMode"));
+    }
+    else if(currentMode === "dark") {
+        articles.forEach(article => article.classList.add("articleDarkMode"));
     }
 }
 
