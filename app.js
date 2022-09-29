@@ -5,6 +5,39 @@ const projects = document.querySelectorAll(".project");
 const projectLinks = document.querySelectorAll(".projectLinks > a");
 const articles = document.querySelectorAll(".article");
 
+let theme;
+
+document.body.onload = function() {
+    if(localStorage.getItem("theme")) {
+        theme = JSON.parse(localStorage.getItem("theme"));
+        if(theme === "dark") {
+            document.body.classList.add("darkMode");
+            themeButton.innerHTML = `<i class="fa-sharp fa-solid fa-sun"></i>`
+            themeButton.classList.remove("darkMode");
+            themeButton.classList.add("lightMode");
+            mainTitle.style.color = "rgb(238, 246, 255)";
+            changeProjectBackgroundColor("dark");
+            changeProjectLinksBackgroundColor("dark");
+            changeArticlesBackgroundColor("dark");
+
+        } else if(theme === "light") {
+            document.body.classList.remove("darkMode");
+            themeButton.innerHTML = `<i class="fa-sharp fa-solid fa-moon"></i>`
+            themeButton.classList.add("darkMode");
+            themeButton.classList.remove("lightMode");
+            document.body.classList.remove("darkMode");
+            header.style.borderBottomColor = "rgb(0, 47, 100)";
+            mainTitle.style.color = "rgb(0, 47, 100)";
+            changeProjectBackgroundColor("light");
+            changeProjectLinksBackgroundColor("light");
+            changeArticlesBackgroundColor("light");
+        }
+    } else {
+        theme = "light";
+        localStorage.setItem("theme", JSON.stringify(theme));
+    }
+}
+
 const changeTheme = () => {
     if(document.body.classList.contains("darkMode")) {
         themeButton.innerHTML = `<i class="fa-sharp fa-solid fa-moon"></i>`
@@ -16,6 +49,10 @@ const changeTheme = () => {
         changeProjectBackgroundColor("light");
         changeProjectLinksBackgroundColor("light");
         changeArticlesBackgroundColor("light");
+
+        theme = "light";
+        localStorage.setItem("theme", JSON.stringify(theme));
+
     } else {
         themeButton.innerHTML = `<i class="fa-sharp fa-solid fa-sun"></i>`
         themeButton.classList.remove("darkMode");
@@ -25,6 +62,10 @@ const changeTheme = () => {
         changeProjectBackgroundColor("dark");
         changeProjectLinksBackgroundColor("dark");
         changeArticlesBackgroundColor("dark");
+
+        theme = "dark";
+        localStorage.setItem("theme", JSON.stringify(theme));
+
     }
 }
 
