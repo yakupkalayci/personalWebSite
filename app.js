@@ -3,11 +3,37 @@ const header = document.querySelector("header");
 const mainTitle = document.querySelector(".mainTitle > a");
 const projects = document.querySelectorAll(".project");
 const projectLinks = document.querySelectorAll(".projectLinks > a");
+const articlesContainer = document.querySelector('.articles');
 const articles = document.querySelectorAll(".article");
 
 let theme;
 
+const fetchArticles =  async () => {
+    const response = await fetch('https://mediumpostsapi.vercel.app/api/ykpklyc18');
+    const data = await response.json();
+    await addArticles(data.dataMedium);
+}
+
+const addArticles = (articlesData) => {
+    articlesData.forEach(item => {
+        articlesContainer.innerHTML += `<div class="article">
+        <div class="articleImg">
+          <img src=${item.image} width="300px" height="300px" loading="lazy"/>
+        </div>
+        <div class="mainArticle">
+          <h3>${item.title}</h3>
+          <p>${item.description}
+            <br /><br /><br />
+            <a href=${item.link} target="_blank">Read
+              more</a>
+          </p>
+        </div>
+        </div>`
+    })
+}
+
 document.body.onload = function() {
+    fetchArticles();
     if(localStorage.getItem("theme")) {
         theme = JSON.parse(localStorage.getItem("theme"));
         if(theme === "dark") {
