@@ -4,7 +4,7 @@ const mainTitle = document.querySelector(".mainTitle > a");
 const projects = document.querySelectorAll(".project");
 const projectLinks = document.querySelectorAll(".projectLinks > a");
 const articlesContainer = document.querySelector('.articles');
-const articles = document.querySelectorAll(".article");
+let articles;
 
 let theme;
 
@@ -29,7 +29,9 @@ const addArticles = (articlesData) => {
           </p>
         </div>
         </div>`
-    })
+    });
+    articles = document.querySelectorAll(".article");
+    console.log(articles);
 }
 
 document.body.onload = function() {
