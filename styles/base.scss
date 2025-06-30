@@ -1,0 +1,6 @@
+@use './variables/general' as *;
+
+body {
+    background-color: $light-yellow;
+    font-family: "Poppins", sans-serif;
+}

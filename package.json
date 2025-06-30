@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "compile:sass": "sass styles/app.scss styles.css --no-source-map",
+    "watch:sass": "sass --watch styles/app.scss styles.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

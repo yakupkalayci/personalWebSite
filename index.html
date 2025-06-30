@@ -2,242 +2,136 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yakup Kalaycı - Frontend Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <!--Font Awesome-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--DEV ICON-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+  <title>Yakup Kalaycı - Frontend Developer</title>
 </head>
 
 <body>
-  <header class="header">
-    <div class="headerSeperator">
-      <div class="mainTitle">
-        <a href="index.html">
-          <h1>YK</h1>
+  <header class="container">
+    <h1 class="header-title">
+      <a href="/">Yakup Kalaycı</a>
+    </h1>
+    <ul class="main-menu">
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Work</a>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+    <ul class="social-menu">
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
         </a>
-      </div>
-      <div class="headerBtn">
-        <a href="#projects" class="headerLinks">Projects</a>
-        <a href="#techStack" class="headerLinks">Tech Stack</a>
-        <a href="#articles" class="headerLinks">Articles</a>
-        <a id="darkModeBtn" class="darkMode">
-          <i class="fa-sharp fa-solid fa-moon"></i>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
         </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </li>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-medium"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="mobile-menu-open-btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="fixed-menu">
+      <div class="mobile-menu-close-btn">
+        <i class="fa-solid fa-xmark"></i>
       </div>
+      <ul class="main-menu">
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Work</a>
+        </li>
+        <li>
+          <a href="#">Projects</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      <ul class="social-menu">
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-medium"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
   <main>
-    <div class="mainText">
-      <h3>Hello there! I'm Yakup!
-        <img
-          src="https://camo.githubusercontent.com/f336f1742227b11a363a649d214ce31b9fb0f3372b53769ac4d1d371c1c27455/68747470733a2f2f63646e2e78677166726d732e78797a2f696d616765732f776176652d68616e642e676966"
-          width="50px" height="50px" id="handIcon" />
-      </h3>
-      <p>
-        Software Developer that is open to learn new technologies especially
-        in web programming. Trying to improve JavaScript stack (Such as
-        React.js, Next.js, Node.js). Working with the aim of improving his
-        knowledge in these fields. Currently studying at university. I make
-        projects and publish them on my Github page.
-      </p>
-    </div>
-    <div class="contactLinks">
-      <a href="https://github.com/yakupkalayci" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/yakupkalayci/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://twitter.com/ykalayci18" target="_blank">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="https://medium.com/@ykpklyc18" target="_blank">
-        <i class="fa-brands fa-medium"></i>
-      </a>
-      <a href="mailto:ykpklyc18@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    </div>
+    <section class="intro-section">
+      <div class="intro-text-wrapper">
+        <p class="intro-text-small">
+          Hello, I'm Yakup,
+        </p>
+        <p class="intro-text">
+          Frontend <br />
+          Developer
+        </p>
+        <p class="intro-text-small">
+          based in Istanbul
+        </p>
+        <button class="intro-section-btn" data-text="More"></button>
+      </div>
+      <div class="avatar-img-wrapper">
+        <img src="images/avatar-left.svg" class="bottom-left">
+        <img src="images/avatar.png" class="avatar-img">
+        <img src="images/avatar-right.svg" class="top-right">
+      </div>
+    </section>
   </main>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <img src="./images/e-commerceapp.PNG" width="300px" height="200px" />
-        <h3>E-Commerce App</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/E-Commerce-App-Next.Js" target="_blank"
-            class="projectLink">Github</a>
-          <a href="https://e-commerce-app-next-js.vercel.app/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Next.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Chakra-ui</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-icons</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/etkinligini-bul.PNG" width="300px" height="200px" />
-        <h3>Etkinliğini Bul</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/find-event-nextJS" target="_blank" class="projectLink">Github</a>
-          <a href="https://etkinligini-bul.vercel.app/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Next.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Chakra-ui</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-icons</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-map-gl</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/book-search.PNG" width="300px" height="200px" />
-        <h3>Book Search Listing</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/Book-Search-Listing-react" target="_blank"
-            class="projectLink">Github</a>
-          <a href="https://61b7a3d4f2b53900a5864fc4--book-search-using-react.netlify.app/" target="_blank"
-            class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-bootstrap</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-grid-layout</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-icons</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Axios</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/currency-converter.PNG" width="300px" height="200px" />
-        <h3>Currency Converter</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/Js-Currency-Converter-App" target="_blank"
-            class="projectLink">Github</a>
-          <a href="https://curreny-converter-by-yakup.netlify.app/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> HTML</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Javascript</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Fetch API</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Async-await</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/translate-app.PNG" width="300px" height="200px" />
-        <h3>Translate App</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/Js-Translate-Application/" target="_blank"
-            class="projectLink">Github</a>
-          <a href="https://translate-app-by-yakup.netlify.app/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> HTML</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Javascript</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Fetch API</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Async-await</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/notes-app.PNG" width="300px" height="200px" />
-        <h3>Notes App</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/notesApp-react-redux" target="_blank" class="projectLink">Github</a>
-          <a href="https://mynotesykp.netlify.app/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Redux</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-icons</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/todolist.PNG" width="300px" height="200px" />
-        <h3>Todo List</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/todoList-react" target="_blank" class="projectLink">Github</a>
-          <a href="http://todolistykp.herokuapp.com/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Webpack</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Babel</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Express.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/contactlist.PNG" width="300px" height="200px" />
-        <h3>Contacts List App</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/Contacts-App-React" target="_blank" class="projectLink">Github</a>
-          <a href="https://specialcontactlist.netlify.app/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React.js</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> React-icons</li>
-        </ul>
-      </div>
-      <div class="project">
-        <img src="./images/xox-game.PNG" width="300px" height="200px" />
-        <h3>X-O-X Game</h3>
-        <div class="projectLinks">
-          <a href="https://github.com/yakupkalayci/xox-game" target="_blank" class="projectLink">Github</a>
-          <a href="https://xox-gamex.netlify.app/" target="_blank" class="projectLink">Live</a>
-        </div>
-        <ul class="tags">
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> HTML</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> CSS</li>
-          <li class="tag"><span><i class="fa-solid fa-tag"></i></span> Javascript</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="techStack">
-    <h2>Tech Stack</h2>
-    <div>
-      <i class="fa-brands fa-html5"></i>
-      <i class="fa-brands fa-css3-alt"></i>
-      <i class="fa-brands fa-js"></i>
-      <i class="devicon-typescript-plain"></i>
-      <i class="devicon-react-original-wordmark"></i>
-      <i class="devicon-redux-original"></i>
-      <i class="devicon-nextjs-original-wordmark"></i>
-      <i class="devicon-nodejs-plain-wordmark"></i>
-      <i class="devicon-mongodb-plain-wordmark"></i>
-      <i class="devicon-npm-original-wordmark"></i>
-      <i class="devicon-heroku-original-wordmark"></i>
-      <i class="devicon-firebase-plain-wordmark"></i>
-    </div>
-  </section>
-
-  <section id="articles">
-    <h2>Articles</h2>
-    <div class="articles">
-    </div>
-  </section>
-
-
-  <footer>
-    <p>
-      Made with <i class="fa-sharp fa-solid fa-mug-hot"></i>
-      by <span>Yakup Kalaycı</span>
-    </p>
-  </footer>
-
   <script src="app.js"></script>
 </body>
-
 </html>

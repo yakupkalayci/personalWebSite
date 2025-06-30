@@ -1,0 +1,88 @@
+$breakpointXS: 0;
+$breakpointSM: 576px;
+$breakpointMD: 768px;
+$breakpointLG: 992px;
+$breakpointXL: 1200px;
+$breakpointXXL: 1440px;
+
+@mixin mobile-small($type: null) {
+    @if($type =='range') {
+        @media screen and (min-width: $breakpointXS) and (max-width: $breakpointSM) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width: $breakpointXS) {
+            @content;
+        }
+    }
+}
+
+@mixin mobile($type: null) {
+    @if($type =='range') {
+        @media screen and (min-width: $breakpointSM) and (max-width: $breakpointMD) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width: $breakpointSM) {
+            @content;
+        }
+    }
+}
+
+@mixin tablet($type: null) {
+    @if($type =='range') {
+        @media screen and (min-width: $breakpointMD) and (max-width: $breakpointLG) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width: $breakpointMD) {
+            @content;
+        }
+    }
+}
+
+@mixin desktop($type: null) {
+    @if($type =='range') {
+        @media screen and (min-width: $breakpointLG) and (max-width: $breakpointXL) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width: $breakpointLG) {
+            @content;
+        }
+    }
+}
+
+@mixin desktop-large($type: null) {
+    @if($type =='range') {
+        @media screen and (min-width: $breakpointXL) and (max-width: $breakpointXXL) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width: $breakpointXL) {
+            @content;
+        }
+    }
+}
+
+@mixin desktop-extra-large {
+    @media screen and (min-width: $breakpointXXL) {
+        @content;
+    }
+}
+
+@mixin responsive-custom($minWidth, $maxWidth) {
+    @media screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        @content
+    }
+}
