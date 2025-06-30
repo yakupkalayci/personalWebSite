@@ -223,7 +223,7 @@ header .fixed-menu .social-menu {
   }
 }
 
-.container, .intro-section {
+.container, .content-section, .intro-section {
   width: 100%;
   padding-left: 12px;
   padding-right: 12px;
@@ -231,27 +231,27 @@ header .fixed-menu .social-menu {
   margin-right: auto;
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
-  .container, .intro-section {
+  .container, .content-section, .intro-section {
     max-width: 540px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .container, .intro-section {
+  .container, .content-section, .intro-section {
     max-width: 720px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  .container, .intro-section {
+  .container, .content-section, .intro-section {
     max-width: 960px;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
-  .container, .intro-section {
+  .container, .content-section, .intro-section {
     max-width: 1140px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .container, .intro-section {
+  .container, .content-section, .intro-section {
     max-width: 1320px;
   }
 }
@@ -317,6 +317,7 @@ header .fixed-menu .social-menu {
   margin-top: 0;
 }
 .intro-section .intro-section-btn {
+  display: block;
   margin-top: 36px;
   background-color: #F5EE84;
   color: #474306;
@@ -341,6 +342,11 @@ header .fixed-menu .social-menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+}
+.intro-section .intro-section-btn:hover::before {
+  top: 0;
+  right: 0;
 }
 .intro-section .avatar-img-wrapper {
   position: relative;
@@ -383,7 +389,60 @@ header .fixed-menu .social-menu {
   }
 }
 
+.content-section:not(:first-child) {
+  margin-top: 64px;
+}
+.content-section .section-title {
+  color: #F7F197;
+  font-weight: 900;
+  font-size: 88px;
+}
+.content-section .section-text {
+  color: #03045E;
+  font-size: 24px;
+}
+
+.timeline-list {
+  width: 75%;
+  margin-left: auto;
+  margin-top: 48px;
+  color: #03045E;
+}
+.timeline-list .timeline-list-item {
+  margin-bottom: 24px;
+}
+.timeline-list .timeline-list-item::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f621";
+  font-size: 24px;
+  font-weight: 900;
+}
+.timeline-list .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.timeline-list .title:hover {
+  text-decoration: underline;
+}
+.timeline-list .desc {
+  font-size: 24px;
+}
+.timeline-list .desc-list {
+  list-style-type: disc;
+  padding-left: 48px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FBF8CC;
   font-family: "Poppins", sans-serif;
+}
+
+.text-bold {
+  font-weight: 700;
 }
