@@ -1,0 +1,77 @@
+@use '../variables/general' as *;
+@use '../mixins/responsive' as *;
+
+.projects-wrapper {
+    margin-top: 36px;
+
+    .project {
+        background-color: $color-white;
+        border: 5px solid $color-black;
+        padding: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+            .project-details-top .project-btn {
+                i {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .project-image {
+            border: 3px solid $color-black;
+
+            img {
+                aspect-ratio: 4 / 3;
+                object-fit: contain;
+            }
+        }
+
+        .project-details {
+            margin-top: 24px;
+        }
+
+        .project-details-content {
+            .project-name {
+                font-weight: 700;
+                font-size: 24px;
+            }
+        }
+
+        .project-btn-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 16px;
+            margin-top: 16px;
+            flex-direction: column; 
+
+            @include desktop {
+                flex-direction: row;
+            }
+
+            .project-btn {
+                padding: 8px 12px;
+                background-color: $light-yellow;
+                color: $color-black;
+                cursor: pointer;
+                filter: drop-shadow(4px 4px 0 #8E8F87);
+                width: 100%;
+                text-align: center;
+
+                @include desktop {
+                    width: auto;
+                }
+
+                &:hover {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .project-details-bottom {
+            margin-top: 12px;
+        }
+    }
+}

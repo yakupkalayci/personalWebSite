@@ -1,6 +1,6 @@
 @use '../mixins/responsive' as *;
 @use '../variables/general' as *;
-@import 'container';
+@use 'container';
 
 .intro-section {
     @extend .container;
