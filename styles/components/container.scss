@@ -1,0 +1,29 @@
+@use '../mixins/responsive.scss' as *;
+
+.container {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile('range') {
+        max-width: 540px;
+    }
+
+    @include tablet('range') {
+        max-width: 720px;
+    }
+
+    @include desktop('range') {
+        max-width: 960px;
+    }
+
+    @include desktop-large('range') {
+        max-width: 1140px;
+    }
+
+    @include desktop-extra-large {
+        max-width: 1320px;
+    }
+}

@@ -1,0 +1,14 @@
+@use './variables/general' as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $light-yellow;
+    font-family: "Poppins", sans-serif;
+}
+
+.text-bold {
+    font-weight: 700;
+}

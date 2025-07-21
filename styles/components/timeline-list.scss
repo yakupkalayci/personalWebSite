@@ -1,0 +1,39 @@
+@use '../variables/general' as *;
+
+.timeline-list {
+    width: 75%;
+    margin-left: auto;
+    margin-top: 48px;
+    color: $dark-blue;
+
+    .timeline-list-item {
+        margin-bottom: 24px;
+
+        &::before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f621";
+            font-size: 24px;
+            font-weight: 900;
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .desc {
+        font-size: 24px;
+    }
+
+    .desc-list {
+        list-style-type: disc;
+        padding-left: 48px;
+    }
+}
