@@ -16,3 +16,12 @@ body {
 .d-none {
     display: none;
 }
+
+.animate-scroll {
+    opacity: 0;
+    transition: all 1s ease;
+
+    &.scrolled {
+        opacity: 1;
+    }
+}
