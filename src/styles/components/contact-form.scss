@@ -1,0 +1,88 @@
+@use '../variables/general' as *;
+@use '../mixins/responsive' as *;
+
+.contact-form {
+    .form-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    .input-control {
+        width: 100%;
+        flex: 1 0 auto;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid $dark-blue;
+        resize: none;
+
+        @include tablet {
+            width: auto;
+        }
+
+        &.has-error {
+            border-color: $warning-red;
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    .submit-btn {
+        padding: 12px 18px;
+        border-radius: 12px;
+        background-color: $dark-blue;
+        color: $color-white;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: auto;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        i {
+            display: none;
+        }
+
+        &.loading {
+
+            i {
+                display: inline-block;
+                margin-left: 12px;
+                animation: rotate 2s linear infinite;
+            }
+        }
+    }
+
+    .form-response {
+        margin-bottom: 24px;
+        color: $color-white;
+        padding: 12px 16px;
+        border-radius: 12px;
+
+        &.success {
+            background-color: $success-green;
+        }
+
+        &.error {
+            background-color: $warning-red;
+        }
+    }
+}

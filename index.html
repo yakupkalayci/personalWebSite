@@ -34,7 +34,7 @@
         <a href="#blog">Blog</a>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
     </ul>
     <ul class="social-menu">
@@ -81,7 +81,7 @@
           <a href="#blog">Blog</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       <ul class="social-menu">
@@ -399,6 +399,30 @@
       <h2 class="section-title">blog.</h2>
       <div class="blog-card-wrapper">
       </div>
+    </section>
+    <section class="content-section" id="contact">
+      <h2 class="section-title">contact.</h2>
+      <form action="https://formsubmit.co/285f22957b5d80f63746c2407d61ba7d" method="POST" class="contact-form">
+        <div class="form-response d-none">Something went wrong.</div>
+        <input type="hidden" name="_domain" value="https://yakupkalayci.netlify.app/">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-control">
+          <input type="text" class="input-control" name="name" placeholder="Name" data-valid="empty">
+          <input type="text" class="input-control" name="surname" placeholder="Surname" data-valid="empty">
+        </div>
+        <div class="form-control">
+          <input type="text" class="input-control" name="topic" placeholder="Topic" data-valid="empty">
+        </div>
+        <div class="form-control">
+          <textarea name="message" placeholder="Messsage" class="input-control" data-valid="empty"></textarea>
+        </div>
+        <div class="form-control">
+          <button type="submit" class="submit-btn">
+            <span>Submit</span>
+            <i class="fa-solid fa-circle-notch"></i>
+          </button>
+        </div>
+      </form>
     </section>
   </main>
   <script type="module" src="src/scripts/index.js"></script>
