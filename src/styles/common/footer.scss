@@ -1,0 +1,17 @@
+@use '../variables/general' as *;
+
+footer {
+    padding: 24px;
+    margin-top: 64px;
+    background-color: $dark-brown;
+    color: $color-white;
+    text-align: center;
+
+    p {
+        letter-spacing: 6px;
+
+        i {
+            font-size: 24px;
+        }
+    }
+}
